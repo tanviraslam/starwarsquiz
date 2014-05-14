@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Star Wars Quiz</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+		<link href="img/favicon.ico" rel="icon" type="image/x-icon"/>
+        <link rel="stylesheet" href="css/normalize.css">
+        <link rel="stylesheet" href="css/main.css">
+
+        <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+        <link href='http://fonts.googleapis.com/css?family=Orbitron:900' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" type="text/css" href="css/lightsabers.css">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+    </head>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <!--Audio files -->
+        <audio src="sounds/lightsaber_03.wav" id="start-hover"></audio>
+        <audio src="sounds/darthvader_anger.wav" id="darkside-1"></audio>
+        <audio src="sounds/darthvader_asyouwish.wav" id="darkside-2"></audio>
+        <audio src="sounds/darthvader_giveyourself.wav" id="darkside-3"></audio>
+        <audio src="sounds/givein_palpa.wav" id="darkside-4"></audio>
+        <audio src="sounds/hate_palpa.wav" id="darkside-5"></audio>
+        <audio src="sounds/wish_vader.wav" id="darkside-6"></audio>
+    
+        <audio src="sounds/use_the_force_yoda.wav" id="yoda-1"></audio>
+        <audio src="sounds/laugh_yoda.wav" id="yoda-2"></audio>
+        <audio src="sounds/helpwill_yoda.wav" id="yoda-3"></audio>
+
+        <!-- -->
+        <div id="start">S<span>T</span>AR W<span>A</span>RS QU<span>I</span>Z</div>
+    	<div id="questions"></div>
+		<div id="progress-saber">
+			<div id="saber" class="plasma-green"></div>
+			<img src="img/lightsaber_hilt_template3.png">
+		</div>
+
+		<div id="progress-saber-dark">
+			<img src="img/lightsaber_hilt_template4.png">
+			<div id="saber-dark" class="plasma-red"></div>
+		</div>
+        
+        
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+
+        <script src="js/main.js"></script>
+        <script type="text/javascript" src="js/script.js"></script>
+    </body>
+</html>

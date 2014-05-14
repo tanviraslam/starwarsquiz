@@ -1,0 +1,43 @@
+
+{
+	"qs1":{
+			"q": "Who is Luke's father ?",
+			"op1" : "Darth Vader",
+			"op2" : "Mace Vindu",
+			"op3" : "Senator Palpatine",
+			"op4" : "Obi-Wan Kenobi",
+			"a" : "Darth Vader"
+		 },
+	"qs2":{
+			"q": "Who is Leia's father ?",
+			"op1" : "Darth Vader",
+			"op2" : "Mace Vindu",
+			"op3" : "Senator Palpatine",
+			"op4" : "Obi-Wan Kenobi",
+			"a" : "Darth Vader"
+		 },
+	"qs3":{
+			"q": "Who is the Emperor ?",
+			"op1" : "Darth Vader",
+			"op2" : "Mace Vindu",
+			"op3" : "Senator Palpatine",
+			"op4" : "Obi-Wan Kenobi",
+			"a" : "Senator Palpatine"
+		 },
+	"qs4":{
+			"q": "Which character was played by Samuel Jackson ?",
+			"op1" : "Darth Vader",
+			"op2" : "Mace Vindu",
+			"op3" : "Senator Palpatine",
+			"op4" : "Obi-Wan Kenobi",
+			"a" : "Mace Vindu"
+		 },
+	"qs5":{
+			"q": "Who is Luke's mother ?",
+			"op1" : "Darth Vader",
+			"op2" : "Mace Vindu",
+			"op3" : "Princess Amidala",
+			"op4" : "Obi-Wan Kenobi",
+			"a" : "Princess Amidala"
+		 }
+}
