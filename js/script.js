@@ -84,9 +84,6 @@ function initialize(){
 			$('#progress-saber,#progress-saber-dark').show();
 			$('#saber').css('height','0');
 			$('#saber-dark').css('height','0');
-
-			//startTutorial(true);
-			// $('#saber,#saber-dark').hide();
 		});
 	});
 	
@@ -127,4 +124,4 @@ function startTutorial(approval){
 }    
 
 //Defining the tour which the walkthrough / tutorial will take.
-                                                                                                                                                                                                                                                              
+                                                                                                                                                                                                                                                 
