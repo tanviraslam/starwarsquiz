@@ -30,7 +30,8 @@ function getQuestions(){
 		datatype: "jsonp",
 		async: false,
 		success: function(data){
-			quiz.questionSet = $.parseJSON(data);
+			console.log(typeof data);
+			quiz.questionSet = (data);
 			quiz.keys = Object.keys(quiz.questionSet);
 		}
 	});
