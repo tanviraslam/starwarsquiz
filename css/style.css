@@ -20,6 +20,7 @@ body{
 	font-size: 80px;
 	position: absolute;
 	top: 40%;
+	width: 60%;
 	left: 20%;
 	z-index: 999;
 	text-align: center;
@@ -83,6 +84,19 @@ div[id^='qs'] p{
 #win,#lose{
 	display: none;
 	color: white;
+	font-family: "Starjhol";
+	color: #EEAD0E;
+	font-size: 90px;
+	position: absolute;
+	top: 30%;
+	left: 30%;
+	text-align: center;
+}
+
+/*For animating the start logo/button*/
+.animate{
+	transition: 1s linear;
+	-webkit-transform: scale(3);
 }
 
 /*Lightsaber code*/
@@ -173,6 +187,9 @@ div[id^='qs'] p{
 	-ms-animation-iteration-count: infinite;
 }
 
+.saber-zero{
+	height: 0 !important;
+}
 
 /*Starry sky effects*/
 @keyframes twinkle {
@@ -216,5 +233,13 @@ div[id^='qs'] p{
     -o-animation:twinkle 200s linear infinite;
     -webkit-animation:twinkle 200s linear infinite;
     animation:twinkle 200s linear infinite;
+}
+
+.walkthrough{
+	border: 5px solid orange;
+	border-radius: 5px;
+	background: #000;
+	height: 80px;
+	width: 120px;
 }
 

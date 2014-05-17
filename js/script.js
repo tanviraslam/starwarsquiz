@@ -77,13 +77,18 @@ function initialize(){
 	quiz.wrong = 1;
 	hideMainScreen();
 	
-	$('#start').click(function(){
-		$(this).animate({"-webkit-transform":"scale(2)"}, 800);
-		$("#questions").css('visibility', "visible");
-		$('#progress-saber,#progress-saber-dark').show();
-		// $('#saber,#saber-dark').hide();
-	});
+	//Incase start is hidded
+	$('#start').show().click(function(){
+		$(this).addClass('animate').fadeOut(1100, function(){
+			$("#questions").css('visibility', "visible");
+			$('#progress-saber,#progress-saber-dark').show();
+			$('#saber').css('height','0');
+			$('#saber-dark').css('height','0');
 
+			//startTutorial(true);
+			// $('#saber,#saber-dark').hide();
+		});
+	});
 	
 	//Load the first question
 	getQuestions();
@@ -92,12 +97,20 @@ function initialize(){
 
 function winScreen(){
 	hideMainScreen();
-	$('#win').show();
+	$('#win').show().fadeOut(1000, function(){
+		$('#start').removeClass('animate');
+		initialize();
+	});
+	
 }
 
 function loseScreen(){
 	hideMainScreen();
-	$('#lose').show();
+	$('#lose').show().fadeOut(1500, function(){
+		$('#start').removeClass('animate');
+		initialize();
+	});
+	
 }
 
 function hideMainScreen(){
@@ -105,4 +118,13 @@ function hideMainScreen(){
 	$('#progress-saber').hide();
 	$('#progress-saber-dark').hide();
 }
-                                                                                                                                                                                                                                                                                                       
+           
+
+function startTutorial(approval){
+	if(approval){
+		$('div[id^=qs]').css("outline","1px dashed white");
+	}
+}    
+
+//Defining the tour which the walkthrough / tutorial will take.
+                                                                                                                                                                                                                                                              
