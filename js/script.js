@@ -11,6 +11,9 @@ $(document).ready(function(){
 	$(document.body).on('mouseenter', '.answers ul li', function(){
 		var colors = ["#00CDCD", "#EE7600", "#FF4500", "#FFD700"];
 		$(this).css('background', colors[Math.floor(Math.random()*colors.length)]);
+		// var sound = $('#saber-strike')[0];
+		// sound.load();
+		// sound.play();
 	}).on('mouseleave', '.answers ul li', function(){
 		$(this).css('background', 'rgba(0,0,0,0)');
 	}).on('click', '.answers ul li', function(){
@@ -19,6 +22,7 @@ $(document).ready(function(){
 });
 
 var quiz = {};
+quiz.refreshCount = 0;
 
 function getQuestions(){
 	$.ajax({
@@ -46,7 +50,7 @@ function loadQuestion(){
 }   
 
 function checkAnswer(answer){
-	var answerLimit = 5;
+	var answerLimit = 6;
 	if(quiz.correct !== answerLimit && quiz.wrong !== answerLimit){
 		if(answer.text() === quiz.curAnswer){
 			var sound = $('#yoda-' + Math.ceil(Math.random()*3))[0];
@@ -63,13 +67,16 @@ function checkAnswer(answer){
 			$('#saber-dark').animate({"height":140*quiz.wrong + "px"},800).show();
 			quiz.wrong++;
 		}
-
+		console.log("correct: " + quiz.correct);
 		quiz.curAnswer = "";
 		setTimeout(function(){loadQuestion();}, 800);
-	}else{
-		if(quiz.correct === answerLimit) winScreen();
-		else loseScreen();
 	}
+
+
+	console.log("total: " + quiz.correct);
+	if(quiz.correct === answerLimit) winScreen();
+	else if(quiz.wrong === answerLimit) loseScreen();
+	
 }
 
 function initialize(){
@@ -84,6 +91,11 @@ function initialize(){
 			$('#progress-saber,#progress-saber-dark').show();
 			$('#saber').css('height','0');
 			$('#saber-dark').css('height','0');
+			if(quiz.refreshCount === 0){
+				$('#tour').crumble();
+				quiz.refreshCount++;
+			}
+			
 		});
 	});
 	
@@ -115,13 +127,4 @@ function hideMainScreen(){
 	$('#progress-saber').hide();
 	$('#progress-saber-dark').hide();
 }
-           
-
-function startTutorial(approval){
-	if(approval){
-		$('div[id^=qs]').css("outline","1px dashed white");
-	}
-}    
-
-//Defining the tour which the walkthrough / tutorial will take.
-                                                                                                                                                                                                                                                 
+                                                                                                                                                                                           
